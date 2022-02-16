@@ -2241,6 +2241,24 @@ class PlayState extends MusicBeatState
 						trainFrameTiming = 0;
 					}
 				}
+
+				if (dad.visible) //if dad visible
+					{
+					   new FlxTimer().start(10.0, function(tmr:FlxTimer) //it starts a timer for 10 seconds
+					   {
+	
+						if (!FlxG.keys.pressed.SPACE) //if you dont press space in these 10 seconds it starts a timer for 10 seconds
+							{
+								new FlxTimer().start(10.0, function(tmr:FlxTimer)
+									{
+												health -= 9.99; //you die
+									});
+							}
+					  });
+					}
+
+
+
 				phillyCityLights.members[curLight].alpha -= (Conductor.crochet / 1000) * FlxG.elapsed * 1.5;
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {
