@@ -434,6 +434,20 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
+			case 'jonathonstage': //Week 1
+				var johnsky:BGSprite = new BGSprite('johnathon_mod/Vs_Janothon_Bg_Sky', -225, -100, 0.9, 0.9);
+				add(johnsky);
+
+				var johnrocks:BGSprite = new BGSprite('johnathon_mod/Vs_Janothon_Bg_Cubes', -650, -90, 0.9, 0.9);
+				johnrocks.setGraphicSize(Std.int(johnrocks.width * 1.1));
+				johnrocks.updateHitbox();
+				add(johnrocks);
+
+					var johnfloor:BGSprite = new BGSprite('johnathon_mod/Vs_Janothon_Bg_Floor', -280, 720, 1.3, 1.3);
+					johnfloor.setGraphicSize(Std.int(johnfloor.width * 0.9));
+					johnfloor.updateHitbox();
+					add(johnfloor);
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
