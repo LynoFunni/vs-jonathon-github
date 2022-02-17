@@ -1406,9 +1406,8 @@ class PlayState extends MusicBeatState
 		
 	  
   }
-	
-	
-	
+
+
 	
 	function startCharacterPos(char:Character, ?gfCheck:Bool = false) {
 		if(gfCheck && char.curCharacter.startsWith('gf')) { //IF DAD IS GIRLFRIEND, HE GOES TO HER POSITION
@@ -2242,23 +2241,6 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				if (dad.visible) //if dad visible
-					{
-					   new FlxTimer().start(10.0, function(tmr:FlxTimer) //it starts a timer for 10 seconds
-					   {
-	
-						if (!FlxG.keys.pressed.SPACE) //if you dont press space in these 10 seconds it starts a timer for 10 seconds
-							{
-								new FlxTimer().start(10.0, function(tmr:FlxTimer)
-									{
-												health -= 9.99; //you die
-									});
-							}
-					  });
-					}
-
-
-
 				phillyCityLights.members[curLight].alpha -= (Conductor.crochet / 1000) * FlxG.elapsed * 1.5;
 			case 'limo':
 				if(!ClientPrefs.lowQuality) {
@@ -2970,6 +2952,33 @@ for (key => value in luaShaders)
 					FlxG.camera.zoom += camZoom;
 					camHUD.zoom += hudZoom;
 				}
+
+			case 'Rock Dodge':
+
+				            var warning = new BGSprite('johnathon_mod/Warning', 0, 0, 1.0, 1.0, ['number']);
+							warning.scrollFactor.set();
+							warning.updateHitbox();
+							warning.screenCenter();
+							warning.x += 0;
+							add(warning);
+					
+							new FlxTimer().start(0.5, function(tmr:FlxTimer)
+							{
+								remove(warning);
+							});
+
+			       
+				if (dad.visible) //if dad visible
+					{
+					   new FlxTimer().start(10.0, function(tmr:FlxTimer) //it starts a timer for 10 seconds
+					   {
+	
+						if (!FlxG.keys.pressed.SPACE) //if you dont press space in these 10 seconds it starts a timer for 10 seconds
+							{
+								health -= 9.99; //you die
+							}
+					  });
+					}
 
 			case 'Trigger BG Ghouls':
 				if(curStage == 'schoolEvil' && !ClientPrefs.lowQuality) {

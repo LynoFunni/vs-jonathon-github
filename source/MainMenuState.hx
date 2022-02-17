@@ -29,6 +29,7 @@ class MainMenuState extends MusicBeatState
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
+	var menubgsgroup:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
 	private var camAchievement:FlxCamera;
 	
@@ -42,10 +43,21 @@ class MainMenuState extends MusicBeatState
 		'options'
 	];
 
+	var optionbgShit:Array<String> = [
+		'story_modebg',
+		'freeplaybg',
+		//#if MODS_ALLOWED 'mods', #end
+		//#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		'creditsbg',
+		//#if !switch 'donate', #end
+		'optionsbg'
+	];
+
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+	private var storymodebg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('mode_storymode'));
 
 	override function create()
 	{
@@ -68,6 +80,7 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
+
 		var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.set(0, yScroll);
@@ -76,6 +89,14 @@ class MainMenuState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+
+		storymodebg.scrollFactor.set(0);
+	    storymodebg.setGraphicSize(Std.int(storymodebg.width * 1.175));
+	    storymodebg.updateHitbox();
+	    storymodebg.visible = false;
+	    storymodebg.screenCenter();
+	    storymodebg.antialiasing = ClientPrefs.globalAntialiasing;
+	    add(storymodebg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -97,11 +118,15 @@ class MainMenuState extends MusicBeatState
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
+		menubgsgroup = new FlxTypedGroup<FlxSprite>();
+		add(menubgsgroup);
+
+
 		var scale:Float = 1;
 		/*if(optionShit.length > 6) {
 			scale = 6 / optionShit.length;
 		}*/
-
+            
 	
 		    //FreePlay Mode
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
@@ -182,6 +207,7 @@ class MainMenuState extends MusicBeatState
 
 		//FlxG.camera.follow(camFollowPos, null, 1);
 
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -211,6 +237,7 @@ class MainMenuState extends MusicBeatState
 		super.create();
 	}
 
+
 	#if ACHIEVEMENTS_ALLOWED
 	// Unlocks "Freaky on a Friday Night" achievement
 	function giveAchievement() {
@@ -224,6 +251,43 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+
+        if (optionShit[curSelected] == 'story_mode')
+			{
+				storymodebg.visible = true;
+
+				changeItem(-1);
+				changeItem(1);
+
+			}
+
+		if (optionShit[curSelected] == 'freeplay')
+				{
+					storymodebg.visible = false;
+	
+					changeItem(-1);
+					changeItem(1);
+	
+				}
+
+				if (optionShit[curSelected] == 'credits')
+					{
+						storymodebg.visible = false;
+		
+						changeItem(-1);
+						changeItem(1);
+		
+					}
+			
+				if (optionShit[curSelected] == 'options')
+						{
+							storymodebg.visible = false;
+			
+							changeItem(-1);
+							changeItem(1);
+			
+						}
+
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
