@@ -3,21 +3,17 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "johnathonstage",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"john",
-		"bf",
-		"gf"
-	],
+	"hideStoryMode": false,
 	"songs": [
 		[
-			"Bopeebo",
+			"Floatin",
 			"dad",
 			[
 				146,
@@ -44,6 +40,10 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
+	"weekCharacters": [
+		"john",
+		"bf",
+		"gf"
+	],
 	"weekName": "johnweek"
 }

@@ -2,73 +2,62 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				20,
+				-8
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Idle"
+			"loop": false,
+			"name": "Cracked Idle"
 		},
 		{
 			"offsets": [
-				10,
-				0
+				13,
+				5
 			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
 			"indices": [],
-			"name": "Right"
-		},
-		{
-			"offsets": [
-				-2,
-				1
-			],
-			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Down"
+			"loop": false,
+			"name": "Cracked Down"
 		},
 		{
 			"offsets": [
-				18,
-				15
+				17,
+				17
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Up"
+			"loop": false,
+			"name": "Cracked Up"
 		},
 		{
 			"offsets": [
-				0,
-				2
+				17,
+				-4
 			],
-			"loop": false,
+			"indices": [],
 			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Left"
+			"loop": false,
+			"name": "Cracked Left"
 		},
 		{
 			"offsets": [
-				395,
-				205
+				9,
+				-3
 			],
 			"indices": [],
 			"fps": 24,
-			"anim": "crackedevent",
+			"anim": "singRIGHT",
 			"loop": false,
-			"name": "Event 1"
+			"name": "Cracked Right"
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/john",
+	"image": "characters/johncracked",
 	"position": [
 		0,
 		450

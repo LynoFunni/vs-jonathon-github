@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="johncracked.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Cracked Down0000" x="0" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0001" x="0" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0002" x="427" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0003" x="427" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0004" x="427" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0005" x="854" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Down0006" x="854" y="0" width="427" height="324"/>
+	<SubTexture name="Cracked Idle0000" x="1281" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0001" x="1281" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0002" x="1281" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0003" x="1709" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0004" x="1709" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0005" x="2137" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0006" x="2565" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0007" x="2565" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0008" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0009" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0010" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0011" x="3421" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0012" x="3421" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0013" x="0" y="324" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0014" x="428" y="324" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0015" x="856" y="324" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0016" x="1284" y="324" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0017" x="1712" y="324" width="459" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0018" x="2171" y="324" width="460" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0019" x="2631" y="324" width="461" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0020" x="3092" y="324" width="462" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0021" x="3554" y="324" width="463" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0022" x="0" y="648" width="465" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0023" x="465" y="648" width="466" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0024" x="931" y="648" width="467" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0025" x="1398" y="648" width="468" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0026" x="1866" y="648" width="470" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0027" x="2336" y="648" width="471" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0028" x="2807" y="648" width="472" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0029" x="3279" y="648" width="473" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0030" x="0" y="972" width="474" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0031" x="474" y="972" width="476" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0032" x="950" y="972" width="477" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0033" x="1427" y="972" width="478" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0034" x="1905" y="972" width="479" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0035" x="2384" y="972" width="481" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0036" x="2865" y="972" width="482" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0037" x="3347" y="972" width="483" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0038" x="0" y="1296" width="484" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0039" x="484" y="1296" width="486" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0040" x="970" y="1296" width="487" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0041" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0042" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0043" x="2993" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0044" x="3421" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0045" x="3421" y="0" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0046" x="0" y="324" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0047" x="1457" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0048" x="1457" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0049" x="1885" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0050" x="1885" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0051" x="1885" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0052" x="2313" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0053" x="2313" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0054" x="2741" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0055" x="3169" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0056" x="3169" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0057" x="3597" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0058" x="3597" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0059" x="3597" y="1296" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0060" x="0" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0061" x="0" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0062" x="428" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0063" x="856" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0064" x="856" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Idle0065" x="856" y="1620" width="428" height="324" frameX="0" frameY="0" frameWidth="488" frameHeight="324"/>
+	<SubTexture name="Cracked Left0000" x="1284" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0001" x="1284" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0002" x="1711" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0003" x="2138" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0004" x="2138" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0005" x="2138" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0006" x="2565" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0007" x="2565" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0008" x="2992" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Left0009" x="2992" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Right0000" x="3419" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Right0001" x="3419" y="1620" width="427" height="324"/>
+	<SubTexture name="Cracked Right0002" x="0" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0003" x="427" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0004" x="427" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0005" x="427" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0006" x="854" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0007" x="854" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0008" x="1281" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Right0009" x="1281" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0000" x="1708" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0001" x="1708" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0002" x="2135" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0003" x="2562" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0004" x="2562" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0005" x="2562" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0006" x="2989" y="1944" width="427" height="324"/>
+	<SubTexture name="Cracked Up0007" x="2989" y="1944" width="427" height="324"/>
+</TextureAtlas>

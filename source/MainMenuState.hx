@@ -57,7 +57,11 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
-	private var storymodebg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('mode_storymode'));
+	private var storymodebg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_storymode'));
+	private var optionsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_options'));
+	private var creditsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_credits'));
+	private var freeplaybg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_freeplay'));
+
 
 	override function create()
 	{
@@ -98,6 +102,31 @@ class MainMenuState extends MusicBeatState
 	    storymodebg.antialiasing = ClientPrefs.globalAntialiasing;
 	    add(storymodebg);
 
+		optionsbg.scrollFactor.set(0);
+	    optionsbg.setGraphicSize(Std.int(optionsbg.width * 1.175));
+		optionsbg.updateHitbox();
+		optionsbg.visible = false;
+		optionsbg.screenCenter();
+		optionsbg.antialiasing = ClientPrefs.globalAntialiasing;
+	    add(optionsbg);
+
+		creditsbg.scrollFactor.set(0);
+		creditsbg.setGraphicSize(Std.int(creditsbg.width * 1.175));
+		creditsbg.updateHitbox();
+		creditsbg.visible = false;
+		creditsbg.screenCenter();
+		creditsbg.antialiasing = ClientPrefs.globalAntialiasing;
+	    add(creditsbg);
+
+		freeplaybg.scrollFactor.set(0);
+		freeplaybg.setGraphicSize(Std.int(freeplaybg.width * 1.175));
+		freeplaybg.updateHitbox();
+		freeplaybg.visible = false;
+		freeplaybg.screenCenter();
+		freeplaybg.antialiasing = ClientPrefs.globalAntialiasing;
+	    add(freeplaybg);
+		
+
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
@@ -122,7 +151,7 @@ class MainMenuState extends MusicBeatState
 		add(menubgsgroup);
 
 
-		var scale:Float = 1;
+		var scale:Float = 0.9;
 		/*if(optionShit.length > 6) {
 			scale = 6 / optionShit.length;
 		}*/
@@ -149,7 +178,7 @@ class MainMenuState extends MusicBeatState
 
 			//Story Mode
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(550,100);
+			var menuItem:FlxSprite = new FlxSprite(100,100);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[0]);
@@ -168,7 +197,7 @@ class MainMenuState extends MusicBeatState
 
 			//Credits
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(550,400);
+			var menuItem:FlxSprite = new FlxSprite(100,400);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[2]);
@@ -259,6 +288,12 @@ class MainMenuState extends MusicBeatState
 				changeItem(-1);
 				changeItem(1);
 
+				optionsbg.visible = false;
+
+				creditsbg.visible = false;
+
+				freeplaybg.visible = false;
+
 			}
 
 		if (optionShit[curSelected] == 'freeplay')
@@ -267,24 +302,42 @@ class MainMenuState extends MusicBeatState
 	
 					changeItem(-1);
 					changeItem(1);
+
+					optionsbg.visible = false;
+
+					creditsbg.visible = false;
+
+					freeplaybg.visible = true;
 	
 				}
 
 				if (optionShit[curSelected] == 'credits')
 					{
+						freeplaybg.visible = false;
+
 						storymodebg.visible = false;
 		
 						changeItem(-1);
 						changeItem(1);
+
+						optionsbg.visible = false;
+
+						creditsbg.visible = true;
 		
 					}
 			
 				if (optionShit[curSelected] == 'options')
 						{
 							storymodebg.visible = false;
-			
+
+							optionsbg.visible = true;
+			                  
 							changeItem(-1);
 							changeItem(1);
+
+							creditsbg.visible = false;
+
+							freeplaybg.visible = false;
 			
 						}
 
