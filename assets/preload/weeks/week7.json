@@ -3,47 +3,47 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "johnathonstage",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
-	"songs": [
-		[
-			"Floatin",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Fresh",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		],
-		[
-			"Dad Battle",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		]
-	],
 	"weekCharacters": [
 		"john",
 		"bf",
 		"gf"
 	],
-	"weekName": "johnweek"
+	"songs": [
+		[
+			"Floatin",
+			"john",
+			[
+				175,
+				153,
+				175
+			]
+		],
+		[
+			"Rough",
+			"john",
+			[
+				175,
+				153,
+				175
+			]
+		],
+		[
+			"Shattering",
+			"john",
+			[
+				135,
+				53,
+				155
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": ""
 }
