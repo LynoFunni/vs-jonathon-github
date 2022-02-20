@@ -125,7 +125,6 @@ class MainMenuState extends MusicBeatState
 		freeplaybg.screenCenter();
 		freeplaybg.antialiasing = ClientPrefs.globalAntialiasing;
 	    add(freeplaybg);
-		
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);

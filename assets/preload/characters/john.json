@@ -2,17 +2,6 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Idle"
-		},
-		{
-			"offsets": [
 				10,
 				0
 			],
@@ -60,14 +49,25 @@
 				395,
 				205
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "crackedevent",
-			"loop": false,
+			"indices": [],
 			"name": "Event 1"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "Idle"
 		}
 	],
-	"no_antialiasing": true,
+	"no_antialiasing": false,
 	"image": "characters/john",
 	"position": [
 		0,
