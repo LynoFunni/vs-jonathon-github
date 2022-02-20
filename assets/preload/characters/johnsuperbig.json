@@ -3,66 +3,66 @@
 		{
 			"loop": false,
 			"offsets": [
-				20,
-				-8
-			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Cracked Idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				13,
-				5
+				24,
+				365
 			],
 			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Cracked Down",
+			"name": "Down",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				17,
-				17
+				20,
+				345
 			],
 			"anim": "singUP",
 			"fps": 24,
-			"name": "Cracked Up",
+			"name": "Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				115,
+				347
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
 				17,
-				-4
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Cracked Left",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				9,
-				-3
+				348
 			],
 			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Cracked Right",
+			"name": "Right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				31,
+				327
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
 			"indices": []
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/johncracked",
+	"image": "characters/johnsuperangry",
 	"position": [
 		0,
 		450
 	],
-	"healthicon": "johncracked",
+	"healthicon": "johnsuperangry",
 	"flip_x": false,
 	"healthbar_colors": [
 		235,
@@ -70,9 +70,9 @@
 		255
 	],
 	"camera_position": [
-		0,
-		0
+		-400,
+		-660
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 2.1
 }

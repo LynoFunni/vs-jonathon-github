@@ -1,0 +1,39 @@
+{
+	"song": {
+		"speed": 2.3,
+		"stage": "jonathonstage",
+		"player1": "bf",
+		"player2": "john",
+		"player3": null,
+		"events": [
+			[
+				105000,
+				[
+					[
+						"Play Animation",
+						"crackedevent",
+						"dad"
+					]
+				]
+			],
+			[
+				105545.454545455,
+				[
+					[
+						"Change Character",
+						"dad",
+						"johncracked"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 110,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Floatin"
+	}
+}
