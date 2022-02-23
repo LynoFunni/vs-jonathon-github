@@ -212,7 +212,7 @@ class TitleState extends MusicBeatState
 		#end
 	}
 
-	var logoBl:FlxSprite;
+	var logoBl:FlxSprite = new FlxSprite(-100,-150);
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
@@ -270,6 +270,9 @@ class TitleState extends MusicBeatState
 		
 		add(bg);
 
+		var gfbg = new BGSprite('Titlebg', 0, 0, 1.0, 1.0);
+		
+
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		
 		
@@ -291,6 +294,8 @@ class TitleState extends MusicBeatState
 		#end
 		
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
+		logoBl.x += 140;
+		logoBl.y += 120;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
@@ -316,10 +321,12 @@ class TitleState extends MusicBeatState
 		
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
 		#end
-			gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-			gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+			gfDance.animation.addByIndices('danceLeft', 'Symbol 7 instance 1', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+			gfDance.animation.addByIndices('danceRight', 'Symbol 7 instance 1', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 	
 		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
+		gfDance.x -= 560;
+		gfDance.y -= 80;
 		add(gfDance);
 		gfDance.shader = swagShader.shader;
 		add(logoBl);

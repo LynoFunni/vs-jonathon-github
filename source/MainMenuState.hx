@@ -11,6 +11,7 @@ import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.util.FlxTimer;
 import flixel.text.FlxText;
 import flixel.math.FlxMath;
 import flixel.tweens.FlxEase;
@@ -150,7 +151,7 @@ class MainMenuState extends MusicBeatState
 		add(menubgsgroup);
 
 
-		var scale:Float = 0.9;
+		var scale:Float = 0.8;
 		/*if(optionShit.length > 6) {
 			scale = 6 / optionShit.length;
 		}*/
@@ -158,13 +159,15 @@ class MainMenuState extends MusicBeatState
 	
 		    //FreePlay Mode
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(100,250);
+			var menuItem:FlxSprite = new FlxSprite(-220,-100);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[1]);
 			menuItem.animation.addByPrefix('idle', optionShit[1] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[1] + " white", 24);
-			menuItem.animation.play('idle');
+			menuItem.animation.addByPrefix('pressright', optionShit[1] + " right press", 24);
+			menuItem.animation.addByPrefix('pressleft', optionShit[1] + " left press", 24);		
+			menuItem.visible = false;
 			menuItem.ID = 1;
 			//menuItem.x = 100;
 			menuItems.add(menuItem);
@@ -177,13 +180,14 @@ class MainMenuState extends MusicBeatState
 
 			//Story Mode
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(100,100);
+			var menuItem:FlxSprite = new FlxSprite(-220,-100);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[0]);
 			menuItem.animation.addByPrefix('idle', optionShit[0] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[0] + " white", 24);
-			menuItem.animation.play('idle');
+			menuItem.animation.addByPrefix('pressright', optionShit[0] + " right press", 24);
+			menuItem.animation.addByPrefix('pressleft', optionShit[0] + " left press", 24);		
 			menuItem.ID = 0;
 			//menuItem.x = 100;
 			menuItems.add(menuItem);
@@ -196,13 +200,15 @@ class MainMenuState extends MusicBeatState
 
 			//Credits
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(100,400);
+			var menuItem:FlxSprite = new FlxSprite(-220,-100);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[2]);
 			menuItem.animation.addByPrefix('idle', optionShit[2] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[2] + " white", 24);
-			menuItem.animation.play('idle');
+			menuItem.animation.addByPrefix('pressright', optionShit[2] + " right press", 24);
+			menuItem.animation.addByPrefix('pressleft', optionShit[2] + " left press", 24);
+			menuItem.visible = false;
 			menuItem.ID = 2;
 			//menuItem.x = 100;
 			menuItems.add(menuItem);
@@ -215,13 +221,15 @@ class MainMenuState extends MusicBeatState
 
 			//Options
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(100,550);
+			var menuItem:FlxSprite = new FlxSprite(-220,-100);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[3]);
 			menuItem.animation.addByPrefix('idle', optionShit[3] + " basic", 24);
 			menuItem.animation.addByPrefix('selected', optionShit[3] + " white", 24);
-			menuItem.animation.play('idle');
+			menuItem.animation.addByPrefix('pressright', optionShit[3] + " right press", 24);
+			menuItem.animation.addByPrefix('pressleft', optionShit[3] + " left press", 24);
+			menuItem.visible = false;
 			menuItem.ID = 3;
 			//menuItem.x = 100;
 			menuItems.add(menuItem);
@@ -293,6 +301,63 @@ class MainMenuState extends MusicBeatState
 
 				freeplaybg.visible = false;
 
+				menuItems.forEach(function(spr:FlxSprite)
+					{
+						
+						if (spr.ID == 0)
+						{   
+							if (controls.UI_RIGHT_P)
+								{
+								  spr.animation.play('pressright');	
+								  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+									{
+										spr.visible = false;
+									});
+								}
+						}
+
+						if (spr.ID == 1)
+							{   
+								if (controls.UI_RIGHT_P)
+									{
+									  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+										{   
+											spr.animation.play('idle');	
+											spr.visible = true;
+										});
+									}
+							}
+
+							if (spr.ID == 0)
+								{   
+									if (controls.UI_LEFT_P)
+										{
+										  spr.animation.play('pressleft');	
+										  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+											{
+												spr.visible = false;
+											});
+										}
+								}
+		
+								if (spr.ID == 3)
+									{   
+										if (controls.UI_LEFT_P)
+											{
+											  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+												{   
+													spr.animation.play('idle');	
+													spr.visible = true;
+												});
+											}
+									}
+		
+
+							
+					});
+
+                
+				
 			}
 
 		if (optionShit[curSelected] == 'freeplay')
@@ -307,6 +372,59 @@ class MainMenuState extends MusicBeatState
 					creditsbg.visible = false;
 
 					freeplaybg.visible = true;
+					menuItems.forEach(function(spr:FlxSprite)
+						{
+							if (spr.ID == 1)
+							{   
+								if (controls.UI_RIGHT_P)
+									{
+									  spr.animation.play('pressright');	
+									  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+										{
+											spr.visible = false;
+										});
+									}
+							}
+	
+							if (spr.ID == 2)
+								{   
+									if (controls.UI_RIGHT_P)
+										{
+										  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+											{   
+												spr.animation.play('idle');	
+												spr.visible = true;
+											});
+										}
+								}
+
+								if (spr.ID == 1)
+									{   
+										if (controls.UI_LEFT_P)
+											{
+											  spr.animation.play('pressleft');	
+											  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+												{
+													spr.visible = false;
+												});
+											}
+									}
+			
+									if (spr.ID == 0)
+										{   
+											if (controls.UI_LEFT_P)
+												{
+												  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+													{   
+														spr.animation.play('idle');	
+														spr.visible = true;
+													});
+												}
+										}
+
+					
+						});
+	
 	
 				}
 
@@ -322,6 +440,58 @@ class MainMenuState extends MusicBeatState
 						optionsbg.visible = false;
 
 						creditsbg.visible = true;
+						menuItems.forEach(function(spr:FlxSprite)
+							{
+								if (spr.ID == 2)
+								{   
+									if (controls.UI_RIGHT_P)
+										{
+										  spr.animation.play('pressright');	
+										  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+											{
+												spr.visible = false;
+											});
+										}
+								}
+		
+								if (spr.ID == 3)
+									{   
+										if (controls.UI_RIGHT_P)
+											{
+											  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+												{
+													spr.animation.play('idle');	
+													spr.visible = true;
+												});
+											}
+									}
+
+									if (spr.ID == 2)
+										{   
+											if (controls.UI_LEFT_P)
+												{
+												  spr.animation.play('pressleft');	
+												  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+													{
+														spr.visible = false;
+													});
+												}
+										}
+				
+										if (spr.ID == 1)
+											{   
+												if (controls.UI_LEFT_P)
+													{
+													  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+														{   
+															spr.animation.play('idle');	
+															spr.visible = true;
+														});
+													}
+											}
+
+							
+							});
 		
 					}
 			
@@ -337,6 +507,57 @@ class MainMenuState extends MusicBeatState
 							creditsbg.visible = false;
 
 							freeplaybg.visible = false;
+
+							menuItems.forEach(function(spr:FlxSprite)
+								{
+									if (spr.ID == 3)
+									{   
+										if (controls.UI_RIGHT_P)
+											{
+											  spr.animation.play('pressright');	
+											  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+												{
+													spr.visible = false;
+												});
+											}
+									}
+			
+									if (spr.ID == 0)
+										{   
+											if (controls.UI_RIGHT_P)
+												{
+												  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+													{   
+														spr.animation.play('idle');	
+														spr.visible = true;
+													});
+												}
+										}
+
+										if (spr.ID == 3)
+											{   
+												if (controls.UI_LEFT_P)
+													{
+													  spr.animation.play('pressleft');	
+													  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+														{
+															spr.visible = false;
+														});
+													}
+											}
+					
+											if (spr.ID == 2)
+												{   
+													if (controls.UI_LEFT_P)
+														{
+														  new FlxTimer().start(0.4, function(tmr:FlxTimer)
+															{   
+																spr.animation.play('idle');	
+																spr.visible = true;
+															});
+														}
+												}
+								});
 			
 						}
 
@@ -350,13 +571,13 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
-			if (controls.UI_UP_P)
+			if (controls.UI_LEFT_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
-			if (controls.UI_DOWN_P)
+			if (controls.UI_RIGHT_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
@@ -450,11 +671,10 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.animation.play('idle');
 			spr.updateHitbox();
 
 			if (spr.ID == curSelected)
-			{
+			{   
 				spr.animation.play('selected');
 				var add:Float = 0;
 				if(menuItems.length > 4) {

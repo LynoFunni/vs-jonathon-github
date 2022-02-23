@@ -1,17 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="menu_options.png">
-	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="options basic0000" x="4" y="4" width="487" height="111" pivotX="14.15" pivotY="11.95"/>
-	<SubTexture name="options basic0001" x="4" y="4" width="487" height="111"/>
-	<SubTexture name="options basic0002" x="4" y="4" width="487" height="111"/>
-	<SubTexture name="options basic0003" x="491" y="4" width="487" height="111"/>
-	<SubTexture name="options basic0004" x="491" y="4" width="487" height="111"/>
-	<SubTexture name="options basic0005" x="491" y="4" width="487" height="111"/>
-	<SubTexture name="options basic0006" x="4" y="115" width="487" height="111"/>
-	<SubTexture name="options basic0007" x="4" y="115" width="487" height="111"/>
-	<SubTexture name="options basic0008" x="4" y="115" width="487" height="111"/>
-	<SubTexture name="options white0000" x="4" y="226" width="606" height="155" pivotX="18.2" pivotY="23.95" frameX="-2" frameY="-1" frameWidth="610" frameHeight="163"/>
-	<SubTexture name="options white0001" x="4" y="381" width="607" height="158" frameX="-3" frameY="-1" frameWidth="610" frameHeight="163"/>
-	<SubTexture name="options white0002" x="4" y="539" width="610" height="163"/>
+	<SubTexture name="options basic0000" x="0" y="0" width="1954" height="1097"/>
+	<SubTexture name="options left press0000" x="1954" y="0" width="1954" height="1097"/>
+	<SubTexture name="options left press0001" x="3908" y="0" width="1954" height="1097"/>
+	<SubTexture name="options left press0002" x="5862" y="0" width="1954" height="1097"/>
+	<SubTexture name="options left press0003" x="0" y="1097" width="1954" height="1097"/>
+	<SubTexture name="options left press0004" x="1954" y="1097" width="1954" height="1097"/>
+	<SubTexture name="options left press0005" x="3908" y="1097" width="1954" height="1097"/>
+	<SubTexture name="options left press0006" x="5862" y="1097" width="1954" height="1097"/>
+	<SubTexture name="options left press0007" x="0" y="2194" width="1954" height="1097"/>
+	<SubTexture name="options left press0008" x="1954" y="2194" width="1954" height="1097"/>
+	<SubTexture name="options left press0009" x="3908" y="2194" width="1954" height="1097"/>
+	<SubTexture name="options left press0010" x="5862" y="2194" width="1954" height="1097"/>
+	<SubTexture name="options right press0000" x="0" y="3291" width="1954" height="1097"/>
+	<SubTexture name="options right press0001" x="1954" y="3291" width="1954" height="1097"/>
+	<SubTexture name="options right press0002" x="3908" y="3291" width="1954" height="1097"/>
+	<SubTexture name="options right press0003" x="5862" y="3291" width="1954" height="1097"/>
+	<SubTexture name="options right press0004" x="0" y="4388" width="1954" height="1097"/>
+	<SubTexture name="options right press0005" x="1954" y="4388" width="1954" height="1097"/>
+	<SubTexture name="options right press0006" x="3908" y="4388" width="1954" height="1097"/>
+	<SubTexture name="options right press0007" x="5862" y="4388" width="1954" height="1097"/>
+	<SubTexture name="options right press0008" x="0" y="5485" width="1954" height="1097"/>
+	<SubTexture name="options right press0009" x="1954" y="5485" width="1954" height="1097"/>
+	<SubTexture name="options right press0010" x="3908" y="5485" width="1954" height="1097"/>
 </TextureAtlas>
