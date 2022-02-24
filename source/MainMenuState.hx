@@ -59,8 +59,8 @@ class MainMenuState extends MusicBeatState
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
 	private var storymodebg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_storymode'));
-	private var optionsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_options'));
-	private var creditsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_credits'));
+	private var optionsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_credits'));
+	private var creditsbg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_options'));
 	private var freeplaybg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('modebgs/mode_freeplay'));
 
 

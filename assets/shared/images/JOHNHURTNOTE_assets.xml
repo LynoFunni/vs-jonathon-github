@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="JOHNHURTNOTE_assets.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="161" height="166"/>
+	<SubTexture name="blue hold end0000" x="161" y="0" width="50" height="64"/>
+	<SubTexture name="blue hold piece0000" x="211" y="0" width="50" height="44"/>
+	<SubTexture name="green0000" x="261" y="0" width="161" height="166"/>
+	<SubTexture name="green hold end0000" x="422" y="0" width="50" height="64"/>
+	<SubTexture name="green hold piece0000" x="0" y="166" width="50" height="44"/>
+	<SubTexture name="pruple end hold0000" x="50" y="166" width="50" height="64"/>
+	<SubTexture name="purple0000" x="100" y="166" width="167" height="162"/>
+	<SubTexture name="purple hold piece0000" x="267" y="166" width="50" height="44"/>
+	<SubTexture name="red0000" x="317" y="166" width="167" height="162"/>
+	<SubTexture name="red hold end0000" x="0" y="328" width="50" height="64"/>
+	<SubTexture name="red hold piece0000" x="50" y="328" width="50" height="44"/>
+</TextureAtlas>

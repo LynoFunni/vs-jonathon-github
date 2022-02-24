@@ -48,13 +48,46 @@ class StoryMenuState extends MusicBeatState
 
 	var difficultySelectors:FlxGroup;
 	var sprDifficulty:FlxSprite;
+	var johnmenuhard:FlxSprite;
+	var johnmenurocked:FlxSprite;
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
+	var scale:Float = 0.6;
+
+	var storyShit:Array<String> = [
+		'hardstuff',
+		'rockedstuff',
+	];
+
 
 	override function create()
 	{
+
+
+
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
+		
+		johnmenuhard = new FlxSprite(-350,-150);
+		johnmenuhard.ID = 0;
+		johnmenuhard.scale.y = scale;
+		johnmenuhard.scale.x = 0.7;
+		johnmenuhard.frames = Paths.getSparrowAtlas('storymenujohn/storybgjohnhard');
+		johnmenuhard.animation.addByPrefix('hard', "hard idle", 24);
+		johnmenuhard.animation.addByPrefix('hardpress', "hard to rocked", 24);
+		johnmenuhard.antialiasing = ClientPrefs.globalAntialiasing;
+		add(johnmenuhard);
+
+		johnmenurocked = new FlxSprite(-350,-150);
+		johnmenurocked.ID = 1;
+		johnmenurocked.scale.y = scale;
+		johnmenurocked.scale.x = 0.7;
+		johnmenurocked.frames = Paths.getSparrowAtlas('storymenujohn/storybgjohnrocked');
+		johnmenurocked.animation.addByPrefix('rocked', "rocked idle", 24);
+		johnmenurocked.animation.addByPrefix('rockedpress', "rocked to hard", 24);
+		johnmenurocked.antialiasing = ClientPrefs.globalAntialiasing;
+		johnmenurocked.visible = false;
+		add(johnmenurocked);
 
 		PlayState.isStoryMode = true;
 		WeekData.reloadWeekFiles(true);
@@ -63,6 +96,7 @@ class StoryMenuState extends MusicBeatState
 
 		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
 		scoreText.setFormat("VCR OSD Mono", 32);
+		
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
 		txtWeekTitle.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, RIGHT);
@@ -76,6 +110,7 @@ class StoryMenuState extends MusicBeatState
 
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var bgYellow:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 386, 0xFFF9CF51);
+		bgYellow.visible = false;
 		bgSprite = new FlxSprite(0, 56);
 		bgSprite.antialiasing = ClientPrefs.globalAntialiasing;
 
@@ -89,6 +124,7 @@ class StoryMenuState extends MusicBeatState
 
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
+		grpLocks.visible = false;
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -119,6 +155,7 @@ class StoryMenuState extends MusicBeatState
 				grpLocks.add(lock);
 			}
 		}
+
 
 		WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[0]));
 		var charArray:Array<String> = WeekData.weeksLoaded.get(WeekData.weeksList[0]).weekCharacters;
@@ -161,6 +198,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.antialiasing = ClientPrefs.globalAntialiasing;
 		difficultySelectors.add(rightArrow);
 
+
 		add(bgYellow);
 		add(bgSprite);
 		add(grpWeekCharacters);
@@ -168,12 +206,14 @@ class StoryMenuState extends MusicBeatState
 		var tracksSprite:FlxSprite = new FlxSprite(FlxG.width * 0.07, bgSprite.y + 425).loadGraphic(Paths.image('Menu_Tracks'));
 		tracksSprite.antialiasing = ClientPrefs.globalAntialiasing;
 		add(tracksSprite);
+		tracksSprite.visible = false;
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, tracksSprite.y + 60, 0, "", 32);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.font = rankText.font;
 		txtTracklist.color = 0xFFe55777;
 		add(txtTracklist);
+		txtTracklist.visible = false;
 		// add(rankText);
 		add(scoreText);
 		add(txtWeekTitle);
@@ -208,19 +248,78 @@ class StoryMenuState extends MusicBeatState
 			if (upP)
 			{
 				changeWeek(-1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
 			if (downP)
 			{
 				changeWeek(1);
-				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
+            
+			if (johnmenuhard.ID == 0)
+			   {
+				   if (johnmenurocked.visible == false)
+					{
+						if (controls.UI_RIGHT_P)
+							{   
+								FlxG.sound.play(Paths.sound('scrollMenu'));
+								johnmenuhard.animation.play('hardpress');
+								new FlxTimer().start(0.4, function(tmr:FlxTimer)
+								{
+									johnmenuhard.visible = false;
+									johnmenurocked.visible = true;
+									johnmenuhard.animation.play('hard');
+								});
+							}
+					}
 
-			if (controls.UI_RIGHT)
-				rightArrow.animation.play('press')
-			else
-				rightArrow.animation.play('idle');
+					if (johnmenurocked.visible == true)
+						{
+							if (controls.UI_RIGHT_P)
+								{
+									FlxG.sound.play(Paths.sound('scrollMenu'));
+									johnmenurocked.animation.play('rockedpress');
+									new FlxTimer().start(0.4, function(tmr:FlxTimer)
+									{
+										johnmenurocked.visible = false;
+										johnmenuhard.visible = true;
+										johnmenurocked.animation.play('rocked');
+									});
+								}
+						}
+
+						if (johnmenurocked.visible == false)
+							{
+								if (controls.UI_LEFT_P)
+									{
+										FlxG.sound.play(Paths.sound('scrollMenu'));
+										johnmenuhard.animation.play('hardpress');
+										new FlxTimer().start(0.4, function(tmr:FlxTimer)
+										{
+											johnmenuhard.visible = false;
+											johnmenurocked.visible = true;
+											johnmenuhard.animation.play('hard');
+										});
+									}
+							}
+		
+							if (johnmenurocked.visible == true)
+								{
+									if (controls.UI_LEFT_P)
+										{
+											FlxG.sound.play(Paths.sound('scrollMenu'));
+											johnmenurocked.animation.play('rockedpress');
+											new FlxTimer().start(0.4, function(tmr:FlxTimer)
+											{
+												johnmenurocked.visible = false;
+												johnmenuhard.visible = true;
+												johnmenurocked.animation.play('rocked');
+											});
+										}
+								}
+			   }
+
+ 
+
 
 			if (controls.UI_LEFT)
 				leftArrow.animation.play('press');

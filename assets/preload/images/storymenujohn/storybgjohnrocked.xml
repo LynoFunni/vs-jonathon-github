@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="storybgjohnrocked.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="rocked idle0000" x="0" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked idle0001" x="0" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0000" x="0" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0001" x="1952" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0002" x="3904" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0003" x="5856" y="0" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0004" x="0" y="1105" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0005" x="1952" y="1105" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0006" x="3904" y="1105" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0007" x="5856" y="1105" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0008" x="0" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0009" x="1952" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0010" x="3904" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0011" x="1952" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0012" x="5856" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0013" x="5856" y="2210" width="1952" height="1105"/>
+	<SubTexture name="rocked to hard0014" x="0" y="3315" width="1952" height="1105"/>
+</TextureAtlas>

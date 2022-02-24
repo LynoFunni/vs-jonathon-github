@@ -95,7 +95,7 @@ class Note extends FlxSprite
 			switch(value) {
 				case 'Hurt Note':
 					ignoreNote = mustPress;
-					reloadNote('HURT');
+					reloadNote('HURT', "NOTE_assets");
 					noteSplashTexture = 'HURTnoteSplashes';
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
@@ -106,12 +106,25 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
-				case 'No Animation':
-					noAnimation = true;
-				case 'GF Sing':
-					gfNote = true;
+
+				case 'John Note':
+					ignoreNote = mustPress;
+					reloadNote('JOHNHURT', "NOTE_assets");
+					noteSplashTexture = 'HURTnoteSplashes';
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+					if(isSustainNote) {
+						missHealth = 0.1;
+					} else {
+						missHealth = 0.3;
+					}
+					hitCausesMiss = true;
+
+
 			}
 			noteType = value;
+
 		}
 		noteSplashHue = colorSwap.hue;
 		noteSplashSat = colorSwap.saturation;
